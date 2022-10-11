@@ -1,0 +1,29 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+:root {
+	--primary-color: #0D2137;
+	--pink-color: #fe7e73;
+	--orange-color: #fbb96b;
+	--white-color: #fff;
+	--black-color: #000;
+}
+
+button {
+    display: inline-block;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+a {
+	text-decoration: none;
+}
+
+i, box-icon, button {
+	cursor: pointer;
+}

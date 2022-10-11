@@ -1,0 +1,57 @@
+<h2>Quản lí đơn hàng</h2>
+<div class="admin-orders">
+	<div class="orders-action">
+		<div class="action-search">
+			<i class="fas fa-search"></i>
+			<input type="text" placeholder="Tìm đơn hàng" />
+		</div>
+		<div class="action-filter">
+			<select name="select-filter" onchange="handleFilter(this)" >
+				<option value="">Add filter</option>
+				<option value="status-waiting">Đang chờ</option>
+				<option value="status-done">Đã giao</option>
+				<option value="status-cancelled">Đã hủy</option>
+				<option value="payment-cod">Ship cod</option>
+				<option value="payment-transfer">Chuyển khoản</option>
+				<option value="date-down">Ngày giảm dần</option>
+				<option value="date-up">Ngày tăng dần</option>
+			</select>
+		</div>
+		<div class="total-orders">
+			<i class="fas fa-box"></i>
+			Đơn chưa giao:&nbsp;
+			<span>0</span>
+		</div>
+	</div>
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>STT</th>
+				<th>Người nhận</th>
+				<th>Số điện thoại</th>
+				<th>Sản phẩm</th>
+                <th class="action-date" style="cursor: pointer;">Ngày đặt
+					<span>
+						<i class="fas fa-sort"></i>
+					</span>
+				</th>
+				<th>Tổng tiền</th>
+				<th>Phương thức</th>
+				<th>Trạng thái</th>
+				<th>Hành động</th>
+			</tr>
+		</thead>
+	</table>
+	<div class="pagination">
+	</div>
+</div>
+
+<style>
+	.form-check.form-switch input {
+		width: 45px;
+		cursor: pointer;
+	}
+</style>
+
+<script>
+</script>

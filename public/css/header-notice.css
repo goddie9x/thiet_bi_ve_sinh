@@ -1,0 +1,13 @@
+.header-notice p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0;
+    background-color: brown;
+    color: white;
+  }
+  
+  .header-notice i{
+    font-size: 20px !important;
+    margin-right: 10px;
+  }

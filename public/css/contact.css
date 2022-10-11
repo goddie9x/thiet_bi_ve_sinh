@@ -1,0 +1,110 @@
+:root {
+  --blue-color: #0D2137;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.mr {
+  margin-right: 20px;
+}
+
+.main {
+  margin-top: 170px;
+  min-height: auto;
+  margin-bottom: 100px;
+}
+
+h3 {
+  font-size: 22px;
+  color: #494343;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.form-input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.form-input input, .form-input textarea {
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid rgba(83, 78, 78, 0.7);
+}
+
+.form-input input {
+  display: inline-block;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-bottom: 15px;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.form-input textarea {
+  width: 100%;
+  height: 200px;
+  padding: 0.8em;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.form-input input:focus, .form-input textarea:focus {
+  border: 1px solid var(--blue-color);
+  -webkit-box-shadow: 0 0 2px var(--blue-color);
+          box-shadow: 0 0 2px var(--blue-color);
+}
+
+.form-input button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: var(--blue-color);
+  color: white;
+  font-size: 15px;
+  padding: 12px 25px;
+  border-radius: 4px;
+}
+
+.form-info {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  margin-left: 40px;
+  padding-left: 20px;
+}
+
+.form-info div {
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.form-info div i {
+  margin-right: 20px;
+  color: var(--blue-color);
+}
+
+.form-info div p {
+  color: #333;
+}
+
+.map {
+  width: 100vw;
+}
+
+.map iframe {
+  width: 100%;
+  height: 450px;
+}
+/*# sourceMappingURL=contact.css.map */

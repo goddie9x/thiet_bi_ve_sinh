@@ -1,0 +1,64 @@
+label {
+  font-weight: 700;
+}
+
+input {
+  outline: none;
+  border: 1px solid transparent;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 18px 0;
+  display: inline-block;
+  background: rgba(221, 221, 221, 0.633);
+}
+
+input:focus {
+  background-color: #ddd;
+  border-color: #ccc;
+}
+
+.edit-customer-button {
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px;
+  margin: 40px 0;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+/* edit image */
+.input-image label {
+  padding: 10px;
+  background-color: var(--main-color);
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.preview-image img {
+  width: 100px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  margin-right: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+/* type */
+select {
+  outline: none;
+  border: none;
+  background-color: rgba(221, 221, 221, 0.633);
+  padding: 12px;
+  min-width: 200px;
+  margin-top: 10px;
+  display: block;
+}
+/*# sourceMappingURL=admin-edit-customer.css.map */

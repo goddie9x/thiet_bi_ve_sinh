@@ -1,0 +1,20 @@
+<div class="section">
+    <div class="section-body">
+        <div class="grid-rows">
+            <% cards.forEach(card => { %>
+            <div class="grid-col-4">
+                <a href="#">
+                    <div class="policy-card">
+                        <div class="policy-card__icon"><i class="<%= card.icon %>"></i></div>
+                        <div class="policy-card__info">
+                            <div class="policy-card__info-name"><%= card.name %></div>
+                            <div class="policy-card__info-description"><%= card.description %></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <% }) %>
+        </div>
+       
+    </div>
+</div>

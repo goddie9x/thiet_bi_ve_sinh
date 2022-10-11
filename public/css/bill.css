@@ -1,0 +1,139 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.bill-container{
+    max-width: 600px;
+    border: 1px solid #ccc;
+}
+
+a {
+    text-decoration: none;
+}
+
+.bill-head{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #0D2137;
+    color: #fff;
+}
+
+.bill-header__left{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.bill-header__right{
+    display: flex;
+    align-items: center;
+}
+
+.bill-header__right a {
+    color: #fff;
+}
+
+.bill-header__right span:first-child {
+    margin-right: 8px;
+}
+
+.bill-body{
+    padding: 20px;
+}
+.bill-body__status{
+    text-align: center;
+}
+
+.bill-body-status__logo {
+    /* padding: 10px; */
+    font-size: 60px;
+    color: #0D2137;
+}
+
+.bill-body__status span {
+    color: #0D2137;
+    font-weight: bold;
+}
+
+th{
+    text-align: left;
+}
+
+th:last-child {
+    text-align: right;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr td {
+    padding: 10px 0 5px;
+}
+
+tr td:last-child {
+    text-align: right;
+    /* font-size: 16px; */
+}
+
+.price-total{
+    font-size: 18px;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #ddd;
+}
+
+.bill-banner{
+    background-color: #0D2137;
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bill-banner a {
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 4px;
+    background-color: rgb(8, 81, 141);
+    display: inline-block;
+}
+
+.bill-banner a:hover {
+    opacity: 0.8;
+}
+
+.bill-banner h4 {
+    font-size: 18px;
+    text-align: center;
+}
+
+.bill-footer{
+    padding: 20px;
+    color: #333;
+}
+
+.bill-footer__address{
+    padding: 20px;
+    padding-bottom: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+.bill-footer__message{
+    text-align: center;
+    line-height: 18px;
+}
+
+
+h2 {
+    margin-top: 0;
+}
+
+p {
+    margin-bottom: 30px;
+}

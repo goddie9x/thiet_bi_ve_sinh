@@ -1,0 +1,138 @@
+<div class="modal">
+    <div class="overlay">
+        <div class="modal-inner">
+            <div class="modal-inner__head">
+                <span>YoloShop</span>
+                <span onclick="closeSearch()"><i class='bx bx-x' ></i></span>
+            </div>
+            <div class="modal-inner__body">
+                <div class="search-group__mobile">
+                    <div class="search-input__mobile">
+                        <input type="text" name="" placeholder="Search..." id="">
+                        <button>
+							<i class='bx bx-search-alt'></i>
+						</button>
+                    </div>
+                    <div class="search-result">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="header">
+    <div class="container">
+
+        <div class="header-menu">
+            <div class="header-logo">
+                <a href="/">
+                    <img class="logo" src="../../public/images/logo-nhatyen.png">
+                </a>
+            </div>
+            <div class="header-menu__mobile-toggle" onClick="menuToggle()">
+                <i class="bx bx-menu-alt-left"></i>
+            </div>
+
+            <!-- <a href="/" class="home"></a> -->
+            <div class="header-menu__right">
+                <div class="header-menu__item">
+                    <div class="search-group">
+                        <div class="search-input">
+                            <input type="text" name="" placeholder="Search..." id="">
+                            <!-- <button>
+								<i class='bx bx-search-alt'></i>
+							</button> -->
+                        </div>
+                        <div class="search-result">
+                        </div>
+                    </div>
+                    <i class="bx bx-search"></i>
+                </div>
+                <div class="header-menu__item cart__icon">
+                    <span class="icon"><i class="bx bx-shopping-bag"></i></span>
+                    <p class="text">
+                        <span class="label">Giỏ hàng</span>
+                        <span class="detail">
+						
+							<% if(cartNum.cartNum != null && cartNum.cartNum.products.length > 0){ %>
+								<span >
+									<%= cartNum.cartNum.products.length %> 
+									<span>sản phẩm - </span>
+                        </span>
+                        <% } %>
+                            </span>
+                    </p>
+                    <span class="cover-num">
+					<% if(cartNum.cartNum != null && cartNum.cartNum.products.length > 0){ %>
+						<a href="/cart" class="cart-num">
+								<%= cartNum.cartNum.products.length %>
+						</a>
+						<% } %>	
+					</span>
+
+                </div>
+                <div class="header-menu__item header-menu__item-user">
+                    <a href="/auth/login">
+                        <span class='icon'><i class="bx bx-user"> </i></span>
+                        <span class='text'>Tài khoản</span>
+                    </a>
+
+                    <div class="user-action">
+                        <ul>
+                            <% if(logging){ %>
+                                <a href="/account">
+                                    <i class="bx bx-user-circle"></i>
+                                    <span>Tài khoản của tôi</span>
+                                </a>
+                                <a href="/account?orders">
+                                    <i class="bx bx-bookmark-alt"></i>
+                                    <span>Đơn mua</span>
+                                </a>
+                                <a href="" onclick="logout()">
+                                    <i class="bx bx-log-out-circle"></i>
+                                    <span>Đăng xuất</span>
+                                </a>
+                                <% } else { %>
+                                    <a href="/auth/login">
+                                        <i class="bx bx-log-in-circle"></i>
+                                        <span>Đăng nhập</span>
+                                    </a>
+                                    <a href="/auth/register">
+                                        <i class='bx bx-user-plus'></i>
+                                        <span>Đăng ký</span>
+                                    </a>
+                                    <% } %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu__left">
+                <div class="header-menu__left-close" onClick="menuToggle()">
+                    <i class="bx bx-chevron-left"></i>
+                </div>
+                <div class="header-menu__item left" id="introduction">
+                    <a href="/introduction">
+                        <span>Giới thiệu</span>
+                    </a>
+                </div>
+                <div class="header-menu__item left" id="product">
+                    <a href="/guide" data-link>
+                        <span>Hướng dẫn</span>
+                    </a>
+                </div>
+                <div class="header-menu__item left">
+                    <a href="/contact" data-link>
+                        <span>Liên hệ</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Tạo lớp overlay loading -->
+<div class="lazy-loading hide">
+    <div class="lazy-text">Loading...</div>
+    <div class="line-loading"></div>
+</div>

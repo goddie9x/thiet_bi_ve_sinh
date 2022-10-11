@@ -1,0 +1,148 @@
+thead {
+  background-color: var(--main-color);
+  color: white;
+}
+
+h4 {
+  color: #4e55e1;
+}
+
+.orderer {
+  margin-bottom: 50px;
+}
+
+.orderer table {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.orderer .orderer-cover img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.orderer a {
+  text-decoration: none;
+}
+
+.info-order {
+  margin-bottom: 40px;
+}
+
+.info-order .basic-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info-order .basic-info div {
+  margin-right: 80px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.info-order .basic-info div.status span {
+  font-size: 16px;
+  margin-left: 10px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.info-order .basic-info div.status span.cancelled {
+  background-color: #fa3a3a;
+}
+
+.info-order .basic-info div.status span.done {
+  background-color: #0ca90c;
+}
+
+.info-order .basic-info div.status span.waiting {
+  background-color: #e7e00a;
+}
+
+.info-order table {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.info-order table .cover-product img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.info-order table a {
+  text-decoration: none;
+}
+
+.receiver table {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.order-action {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: -20px;
+}
+
+.order-action button,
+.order-action a {
+  display: inline-block;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 10px;
+  font-size: 19px;
+  margin-left: 20px;
+  background-color: #0ca90c;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.order-action button:hover,
+.order-action a:hover {
+  opacity: 0.8;
+}
+
+.order-action .bill-order {
+  background-color: #3838e1;
+  text-align: center;
+}
+
+.order-action .cancel-order {
+  background-color: #fa3a3a;
+}
+
+.order-action.done .delivery-order,
+.order-action.done .cancel-order, .order-action.cancelled .delivery-order,
+.order-action.cancelled .cancel-order {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.6;
+  -webkit-box-shadow: 0 0 2px black;
+          box-shadow: 0 0 2px black;
+}
+/*# sourceMappingURL=admin-detail-order.css.map */

@@ -1,0 +1,190 @@
+a {
+  text-decoration: none;
+}
+
+.admin-products {
+  width: 100%;
+}
+
+.admin-products table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: var(--white-color);
+}
+
+.admin-products table th,
+.admin-products table td {
+  text-align: left;
+  padding: 7px 15px;
+}
+
+.admin-products table th img,
+.admin-products table td img {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.admin-products table thead {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.admin-products table .stt-product {
+  width: 1%;
+  text-align: center;
+}
+
+.admin-products table .id-product {
+  padding-right: 0;
+}
+
+.admin-products table .id-product a {
+  text-decoration: none;
+}
+
+.admin-products table .cover-product {
+  width: 5%;
+}
+
+.admin-products table .name-product {
+  width: 15%;
+}
+
+.admin-products table .sold-product {
+  padding-left: 15px;
+}
+
+.admin-products table .last-product {
+  padding-left: 30px;
+}
+
+.admin-products table .action-product button {
+  font-size: 18px;
+  margin: 8px;
+}
+
+.admin-products .products-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.admin-products .products-action .action-search {
+  border-bottom: 2px solid black;
+}
+
+.admin-products .products-action .action-search i {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.admin-products .products-action .action-search input {
+  border: none;
+  outline: none;
+  padding: 4px 0;
+  background-color: transparent;
+  border: none;
+  margin-left: 3px;
+  font-size: 16px;
+}
+
+.admin-products .products-action .action-filter {
+  margin-left: auto;
+}
+
+.admin-products .products-action .action-add,
+.admin-products .products-action .total-products {
+  font-size: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  top: 10px;
+  padding: 8px 20px;
+  border-radius: 5px;
+}
+
+.admin-products .products-action .action-add span,
+.admin-products .products-action .total-products span {
+  color: red;
+  font-size: 18px;
+}
+
+.admin-products .products-action .action-add i,
+.admin-products .products-action .total-products i {
+  margin-right: 6px;
+  font-size: 17px;
+  position: relative;
+  top: 2px;
+  margin-top: 1px;
+}
+
+.admin-products .products-action .action-add:hover,
+.admin-products .products-action .total-products:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.admin-products > table tr.more-product-table {
+  display: none;
+}
+
+.admin-products > table tr.more-product-table table {
+  background: rgba(221, 221, 221, 0.7);
+}
+
+.admin-products > table tr.more-product-table table th,
+.admin-products > table tr.more-product-table table td {
+  width: 20px;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pagination a {
+  display: inline-block;
+  padding: 4px 10px;
+  border: 1px solid #333;
+  margin: 5px;
+  color: black;
+}
+
+.admin-products .products-action .action-filter {
+  padding: 0;
+  border: 0;
+}
+
+.admin-products .products-action .action-filter select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--main-color);
+}
+
+.admin-products .products-action .action-filter:hover select {
+  color: white;
+  background-color: var(--main-color);
+}
+/*# sourceMappingURL=admin-products.css.map */

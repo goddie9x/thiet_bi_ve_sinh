@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Dien lanh - Trang chủ</title>
+	<link rel="stylesheet" href="../../public/css/header.css" />
+	<link rel="stylesheet" href="../../public/css/header-notice.css" />
+	<link rel="stylesheet" href="../../public/css/slider.css" />
+	<link rel="stylesheet" href="../../public/css/featured-card.css" />
+	<link rel="stylesheet" href="../../public/css/footer.css" />
+	<link rel="stylesheet" href="../../public/css/homeBase.css" />
+	<link rel="stylesheet" href="../../public/css/product-card.css" />
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<style>
+	:root {
+		--blue-color: #0D2137;
+		--pink-color: #fe7e73;
+		--orange-color: #fbb96b;
+	}
+</style>
+
+<body>
+	<%- include ('../components/header-notice'); -%>
+
+	<%- include ('../components/header'); -%>
+
+		<div class="container">
+			<div class="main">
+				<div>
+					<!-- <<%- include ('../components/slider'); -%> -->
+					<%- include ('../components/featured-card'); -%>
+					<%- include ('../components/hot-products'); -%>
+					<%- include ('../components/new-products'); -%>
+					<div class="section">
+						<div class="section-body">
+							<a href="">
+								<img src="/public/images/banner.png" alt="" loading="lazy" />
+							</a>
+						</div>
+					</div>
+					<%- include ('../components/popular-product') -%>
+				</div>
+			</div>
+		</div>
+		<%- include ('../components/footer'); -%>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+			<script src="../../public/js/header.js"></script>
+			<script src="../../public/js/slider.js"></script>
+</body>
+
+</html>

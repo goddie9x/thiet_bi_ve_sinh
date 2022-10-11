@@ -1,0 +1,29 @@
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    margin-top: 80px;
+    text-align:center;
+}
+
+h1 {
+    color: #0D2137;
+    font-size: 150px;
+}
+
+h2 {
+    color: #655f62;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+a {
+    color: white;
+    background-color: #0D2137;
+    padding: 10px 20px;
+    font-size: 17px;
+    border-radius: 5px;
+    
+}

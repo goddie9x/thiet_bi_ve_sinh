@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yolo - Sửa tin tức</title>
+    <link rel="stylesheet" href="/public/css/header.css" />
+    <link rel="stylesheet" href="/public/css/footer.css" />
+    <link rel="stylesheet" href="/public/css/homeBase.css" />
+    <link rel="stylesheet" href="/public/css/news.css" />
+    <link rel="stylesheet" href="/public/css/news-add.css" />
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<style>
+    :root {
+        --blue-color: #0D2137;
+        --pink-color: #fe7e73;
+        --orange-color: #fbb96b;
+    }
+</style>
+
+<body>
+    <%- include ('../components/header'); -%>
+
+        <div class="container">
+            <div class="main">
+                <div>
+                    <div class="news-container" id="<%= newsElement._id %>">
+                        <h2 style="text-align:center; margin-bottom: 30px;">News's Banner</h2>
+                        <div class="news-banner">
+                            <img src="<%= newsElement.banner %>" alt="" loading="lazy" >
+                            <span class="upload-icon">
+                                <i class='bx bx-upload'></i>
+                            </span>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-content__title">
+                                <h2 style="margin-bottom: 15px;">News's Title</h2>
+                                <input type="text" name="title" id="input-title" value="<%= newsElement.title %>" placeholder="Enter news's title">
+                            </div>
+                            <div class="section-body">
+                                <h2 style="margin-bottom: 15px;">New's description</h2>
+                                <textarea id="editor" name="editor"><%= newsElement.description %></textarea>
+                            </div>
+                        </div>
+                        <form action="/admin/edit-news" method="PUT" enctype="multipart/form-data">
+                            <input type="file" name="banner" id="banner" style="display: none;">
+                            <button id="add-news" class="btn btn-primary btn-large btn-txt" type="submit">Lưu</button>
+                            <a href="/admin/news" class="btn btn-txt btn-primary btn-large">Trở lại</a>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include ('../components/footer'); -%>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="/public/js/header.js"></script>
+            <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+            <script>
+                CKEDITOR.replace( 'editor' );
+            </script>
+            <script src="/public/js/news-edit.js"></script>        
+</body>
+
+</html>

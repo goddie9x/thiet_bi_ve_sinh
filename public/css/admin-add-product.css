@@ -1,0 +1,133 @@
+label {
+	font-weight: 700;
+}
+
+input {
+	outline: none;
+	border: 1px solid transparent;
+	width: 100%;
+	padding: 10px;
+	margin: 5px 0 18px 0;
+	display: inline-block;
+	background: rgba(221, 221, 221, 0.633);
+}
+
+input:focus {
+	background-color: #ddd;
+	border-color: #ccc;
+}
+
+.add-product-button {
+	background-color: var(--main-color);
+	color: white;
+	padding: 10px;
+	margin: 40px 0;
+	cursor: pointer;
+	width: 100%;
+	font-size: 18px;
+	border-radius: 4px;
+}
+
+.add-product-button:hover {
+	opacity: 1;
+}
+
+.preview-color {
+	width: 43px;
+	height: 43px;
+	background-color: rgb(92, 82, 82);
+	border: 1px solid rgb(92, 82, 82);
+}
+
+.wrap-color input {
+	margin: 0;
+	margin-left: 10px;
+}
+
+.wrap-size > div {
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	border: 3px solid #ccc;
+	font-size: 17px;
+
+	margin-right: 15px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wrap-size > div.active-size {
+	border-color: var(--main-color);
+}
+
+textarea {
+	height: 200px;
+}
+
+textarea:focus {
+	box-shadow: none !important;
+}
+
+/* type */
+select {
+	width: 100%;
+	outline: none;
+	border: none;
+	background-color: rgba(221, 221, 221, 0.633);
+	padding: 12px;
+	position: relative;
+	top: 4px;
+}
+
+.product-size {
+	position: relative;
+	top: 0;
+	/* height: 180%; */
+}
+
+.product-total {
+	/* padding: 0; */
+	margin: 0;
+}
+
+/* add images */
+.input-images label {
+	padding: 10px;
+	background-color: var(--main-color);
+	border-radius: 4px;
+	color: white;
+	font-size: 14px;
+	font-weight: 500;
+	cursor: pointer;
+	margin-bottom: 15px;
+}
+
+.preview-images img {
+	width: 100px;
+	border: 1px solid #ccc;
+	display: inline-block;
+	margin-right: 20px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.more-product-btn button
+{
+	padding: 10px;
+	background-color: rgba(27, 32, 61, 0.9);
+	border-radius: 4px;
+	color: white;
+	font-size: 14px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.more-product-delete-btn button {
+	padding: 10px 20px;
+	background-color: rgba(27, 32, 61, 0.9);
+	border-radius: 4px;
+	color: white;
+	margin-top: 8px;
+}

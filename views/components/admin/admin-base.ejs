@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Admin</title>
+
+            <!-- Reset css -->
+            <link rel="stylesheet" href="/public/css/reset.css" />
+        
+            <!-- Font awesome -->
+            <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+                integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+                crossorigin="anonymous"
+                referrerpolicy="no-referrer"
+            />
+            <link
+                href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+                rel="stylesheet"
+            />
+        
+            <!-- Bootstrap -->
+            <link
+                href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+                rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous"
+            />
+
+            <link rel="stylesheet" href="/public/css/admin.css" />
+        
+            <% if (content == 'dashboard') { %>
+                <link rel="stylesheet" href="/public/css/admin-dashboard.css" />
+            <% } %>
+            <% if (content == 'products') { %>
+                <link rel="stylesheet" href="/public/css/admin-products.css" />
+            <% } %>
+            <% if (content == 'add-product' || content == 'edit-product') { %>
+                <link rel="stylesheet" href="/public/css/admin-add-product.css" />
+            <% } %>
+            <% if (content == 'add-category' || content == 'edit-category') { %>
+                <link rel="stylesheet" href="/public/css/admin-add-category.css" />
+            <% } %>
+            <% if (content == 'customers') { %>
+                <link rel="stylesheet" href="/public/css/admin-customers.css" />
+            <% } %>
+            <% if (content == 'edit-customer') { %>
+                <link rel="stylesheet" href="/public/css/admin-edit-customer.css" />
+            <% } %>
+            <% if (content == 'orders') { %>
+                <link rel="stylesheet" href="/public/css/admin-orders.css" />
+            <% } %>
+            <% if (content == 'detail-order') { %>
+                <link rel="stylesheet" href="/public/css/admin-detail-order.css" />
+            <% } %>
+        </head>
+        
+	</head>
+
+	<body>
+		<div class="admin-nav">
+            <h1>Nhật Yên-Shop</h1>
+            <a href="/admin" name-nav="dashboard"
+                ><i class="fas fa-columns"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="/admin/products" name-nav="products"
+                ><i class="fas fa-list"></i>
+                <span>Products</span>
+            </a>
+            <a href="/admin/customers" name-nav="customers"
+                ><i class="fas fa-user-friends"></i>
+                <span>Customers</span>
+            </a>
+            <a href="/admin/orders" name-nav="orders"
+                ><i class="fas fa-shopping-bag"></i>
+                <span>Orders</span>
+            </a>
+           
+            <a href="/admin/account" name-nav="account"
+                ><i class="fas fa-user"></i>
+                <span>Account</span>
+            </a>
+            <a href="/admin/categoris" name-nav="categoris"
+                ><i class="fas fa-cog"></i>
+                <span>Danh mục sản phẩm</span>
+            </a>
+        </div>
+
+		<div class="admin-main">
+			<div>
+				<div class="admin-header">
+                    <div class="right-side">
+                        <i class="far fa-bell"></i>
+                        <img
+                            src="https://nghialagi.org/wp-content/uploads/2020/03/background-la-gi.jpg"
+                            alt=""
+                        />
+                    </div>
+                </div>
+                
+
+				<div class="admin-content">
+                    <% if (content == 'dashboard') { %>
+                        <%- include ('admin-dashboard', {data: data}) -%>
+                    <% } %>
+                    <% if (content == 'products') { %>
+                        <%- include ('admin-products'); -%>
+                    <% } %>
+                    <% if (content == 'category') { %>
+                        <%- include ('admin-category'); -%>
+                    <% } %>
+                    <% if (content == 'customers') { %>
+                        <%- include ('admin-customers'); -%>
+                    <% } %>
+                    <% if (content == 'add-product' || content == 'edit-product') { %>
+                        <%- include ('admin-add-product'); -%>
+                    <% } %>
+                    <% if (content == 'add-category' || content == 'edit-category') { %>
+                        <%- include ('admin-add-category'); -%>
+                    <% } %>
+                    <% if (content == 'edit-customer') { %>
+                        <%- include ('admin-edit-customer', {user: data.user}); -%>
+                    <% } %>
+                    <% if (content == 'orders') { %>
+                        <%- include ('admin-orders'); -%>
+                    <% } %>
+                    <% if (content == 'detail-order') { %>
+                        <%- include ('admin-detail-order', {order}); -%>
+                    <% } %>
+				</div>
+			</div>
+		</div>
+
+
+        <!-- Tạo lớp overlay loading -->
+        <div class="lazy-loading hide">
+            <div class="lazy-text">Loading...</div>
+            <div class="line-loading"></div>
+        </div>
+
+
+		<!-- Jquery -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- Pagination -->
+        <!-- <script src="/public/js/pagination.min.js"></script> -->
+
+
+        <script src="/public/js/admin.js"></script>
+        <script src="/public/js/base.js"></script>
+
+        <% if (content == 'dashboard') { %>
+            <script src="/public/js/admin-dashboard.js"></script>
+        <% } %>
+        <% if (content == 'products') { %>
+            <script src="/public/js/admin-products.js"></script>
+            <!-- <script src="/public/js/admin-products-test.js"></script> -->
+        <% } %>
+        <% if (content == 'customers') { %>
+            <script src="/public/js/admin-customers.js"></script>
+        <% } %>
+        <% if (content == 'orders') { %>
+            <script src="/public/js/admin-orders.js"></script>
+        <% } %>
+        <% if (content == 'detail-order') { %>
+            <script src="/public/js/admin-detail-order.js"></script>
+        <% } %>
+
+        <!-- Only add product -->
+        <% if (content == 'add-product') { %>
+            <script src="/public/js/admin-add-product.js"></script>
+        <% } %>
+
+        <!-- Edit and see product -->
+        <% if (content == 'edit-product') { %>
+            <script src="/public/js/admin-edit-product.js"></script>
+        <% } %>
+
+        <!-- Edit customer -->
+        <% if (content == 'edit-customer') { %>
+            <script src="/public/js/admin-edit-customer.js"></script>
+        <% } %>
+
+        <!-- Only add product -->
+        <% if (content == 'add-category') { %>
+            <script src="/public/js/admin-add-category.js"></script>
+        <% } %>
+	</body>
+</html>

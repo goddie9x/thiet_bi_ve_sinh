@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Yolo - <%= product.name %></title>
+	<link rel="stylesheet" href="../../public/css/header.css" />
+	<link rel="stylesheet" href="../../public/css/featured-card.css" />
+	<link rel="stylesheet" href="../../public/css/footer.css" />
+	<link rel="stylesheet" href="../../public/css/product-card.css" />
+	<link rel="stylesheet" href="../../public/css/homeBase.css" />
+	<link rel="stylesheet" href="../../public/css/product-detail.css" />
+	<link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<style>
+	:root {
+		--blue-color: #0D2137;
+		--pink-color: #fe7e73;
+		--orange-color: #fbb96b;
+	}
+</style>
+
+<body>
+
+	<%- include ('../components/header'); -%>
+	<div id="app" class="container">
+		<div class="main">
+			<div class="section">
+				<div class="product">
+					<%- include ('../components/product_images'); -%> 
+					<%- include ('../components/product_info'); -%> 
+				</div>
+			</div>
+			<div class="section">
+				<div class="section-title">Khám phá thêm</div>
+				<div class="section-body">
+					<% for (var i = 1; i <= moreIndexes.length - 3; i++) { %>
+						<% if (i % 4 == 1){ %>
+							<div class="grid-rows">
+								<% for (var j = i - 1; j < (i + 3); j++) { %>
+									<div class="grid-col-4">
+										<%- include ('../components/product-card', {
+											id: products[moreIndexes[j]]._id,
+											name: products[moreIndexes[j]].name,
+											price: products[moreIndexes[j]].cost.toLocaleString(),
+											imgFront: products[moreIndexes[j]].images[0],
+											imgBack: products[moreIndexes[j]].images[1]
+										}) -%>
+									</div>
+								<% } %>
+							</div>
+						<% } %>
+					<% } %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<%- include ('../components/footer'); -%>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="../../public/js/header.js"></script>
+	<script src="../../public/js/product-detail.js"></script>
+</body>
+
+</html>

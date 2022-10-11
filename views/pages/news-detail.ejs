@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Yolo - <%= newsElement.title %></title>
+		<link rel="stylesheet" href="../../public/css/header.css" />
+		<link rel="stylesheet" href="../../public/css/footer.css" />
+		<link rel="stylesheet" href="../../public/css/homeBase.css" />
+		<link rel="stylesheet" href="../../public/css/news.css" />
+		<link
+			href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+	</head>
+	<style>
+		:root {
+			--blue-color: #0D2137;
+			--pink-color: #fe7e73;
+			--orange-color: #fbb96b;
+		}
+	</style>
+
+	<body>
+		<%- include ('../components/header'); -%>
+
+		<div class="container">
+			<div class="main">
+				<div>
+					<div class="news-container">
+						<div class="news-banner">
+							<img src="<%= newsElement.banner %>" alt="" loading="lazy" />
+						</div>
+						<div class="news-content">
+							<div class="section-title"><%= newsElement.title %></div>
+							<div class="section-body"><%= newsElement.description %></div>
+						</div>
+						<div class="change-page">
+							<a href="/news/detail/<%= before %>"
+								><i class="bx bx-chevron-left"></i
+							></a>
+							<a href="/news/detail/<%= after %>"
+								><i class="bx bx-chevron-right"></i
+							></a>
+						</div>
+						<div class="newsletter-form">
+							<div class="newsletter-form__inner">
+								<div class="section-title">Newsletter</div>
+								<p>
+									Sign up to stay in the loop. Receive updates, access to
+									exclusive deals, and more.
+								</p>
+								<form class="send-mail" action="news/send-mail" method="post">
+									<div class="form-send">
+										<input
+											type="email"
+											required
+											name="email"
+											placeholder="email@example.com"
+										/>
+										<button type="submit">Subscribe ></button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<%- include ('../components/footer'); -%>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="../../public/js/header.js"></script>
+		<script src="/public/js/news-detail.js"></script>
+		<script>
+			$('.section-body').html($('.section-body').text())
+		</script>
+	</body>
+</html>

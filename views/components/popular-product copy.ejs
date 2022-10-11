@@ -1,0 +1,22 @@
+<div class="section">
+    <div class="section-title">Phổ biến</div>
+    <div class="section-body">
+        <% for (var i = 1; i <= popularIndexes.length - 3; i++) { %>
+            <% if (i % 4 == 1){ %>
+                <div class="grid-rows">
+                    <% for (var j = i - 1; j < (i + 3); j++) { %>
+                        <div class="grid-col-4">
+                            <%- include ('./product-card', {
+                                id: products[popularIndexes[j]]._id,
+                                name: products[popularIndexes[j]].name,
+                                price: products[popularIndexes[j]].cost.toLocaleString(),
+                                imgFront: products[popularIndexes[j]].images[0],
+                                imgBack: products[popularIndexes[j]].images[1]
+                            })-%>
+                        </div>
+                    <% } %>
+                </div>
+            <% } %>
+        <% } %>
+    </div>
+</div>

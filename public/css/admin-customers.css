@@ -1,0 +1,129 @@
+a {
+  text-decoration: none;
+}
+
+.admin-customers {
+  width: 100%;
+}
+
+.admin-customers table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: var(--white-color);
+}
+
+.admin-customers table th,
+.admin-customers table td {
+  text-align: left;
+  padding: 7px 15px;
+}
+
+.admin-customers table th img,
+.admin-customers table td img {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.admin-customers table thead {
+  background-color: var(--main-color);
+  color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.admin-customers table .stt-customer {
+  width: 2%;
+  text-align: center;
+}
+
+.admin-customers table .id-customer a {
+  text-decoration: none;
+}
+
+.admin-customers table .sold-customer,
+.admin-customers table .last-customer {
+  padding-left: 30px;
+}
+
+.admin-customers table .action-customer button {
+  font-size: 18px;
+  margin: 8px;
+}
+
+.admin-customers .customers-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.admin-customers .customers-action .action-filter {
+  margin-left: auto;
+}
+
+.admin-customers .customers-action .action-filter,
+.admin-customers .customers-action .action-add,
+.admin-customers .customers-action .total-customers {
+  font-size: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  top: 10px;
+  padding: 8px 20px;
+  border-radius: 5px;
+}
+
+.admin-customers .customers-action .action-filter span,
+.admin-customers .customers-action .action-add span,
+.admin-customers .customers-action .total-customers span {
+  color: red;
+  font-size: 18px;
+}
+
+.admin-customers .customers-action .action-filter i,
+.admin-customers .customers-action .action-add i,
+.admin-customers .customers-action .total-customers i {
+  margin-right: 6px;
+  font-size: 17px;
+  position: relative;
+  top: 2px;
+  margin-top: 1px;
+}
+
+.admin-customers .customers-action .action-filter:hover,
+.admin-customers .customers-action .action-add:hover,
+.admin-customers .customers-action .total-customers:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pagination a {
+  display: inline-block;
+  padding: 4px 10px;
+  border: 1px solid #333;
+  margin: 5px;
+  color: black;
+}
+/*# sourceMappingURL=admin-customers.css.map */

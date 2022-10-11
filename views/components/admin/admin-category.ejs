@@ -1,0 +1,78 @@
+<h2>Quản lí danh mục sản phẩm</h2>
+<div class="admin-products">
+	<div class="products-action">
+		<div class="action-search">
+			<i class="fas fa-search"></i>
+			<input type="text" placeholder="Tìm sản phẩm" />
+		</div>
+		<div class="action-filter">
+			<!-- <i class="fas fa-filter"></i>
+			Add filter -->
+			<select name="select-filter" onchange="handleFilter(this)">
+				<option value="">Add filter</option>
+				<option value="date-up">Ngày giảm dần</option>
+				<option value="date-down">Ngày tăng dần</option>
+				<option value="cost-up">Giá giảm dần</option>
+				<option value="cost-down">Giá tăng dần</option>
+				<option value="left-up">Còn lại giảm dần</option>
+				<option value="left-down">Còn lại tăng dần</option>
+			</select>
+		</div>
+		<div class="action-add">
+			<i class="fas fa-plus-square"></i>
+			Thêm sản phẩm
+		</div>
+		<div class="total-products">
+			<i class="fas fa-box"></i>
+			Tổng sản phẩm:&nbsp;
+			<span>0</span>
+		</div>
+	</div>
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>STT</th>
+				<th>ID</th>
+				<th>Cover</th>
+				<th>Sản phẩm</th>
+				<th class="action-date" style="cursor: pointer;">Ngày đăng
+					<span>
+						<i class="fas fa-sort"></i>
+					</span>
+				</th>
+				<th class="action-cost" style="cursor: pointer;">Giá
+					<span>
+						<i class="fas fa-sort"></i>
+					</span>
+				</th>
+				<th>Loại</th>
+				<th  class="action-left" style="cursor: pointer;">Còn lại
+					<span>
+						<i class="fas fa-sort"></i>
+					</span>
+				</th>
+				<th>Hành động</th>
+			</tr>
+		</thead>
+	</table>
+	<div class="pagination">
+		
+	</div>
+</div>
+
+<style>
+	.form-check.form-switch input {
+		width: 45px;
+		cursor: pointer;
+	}
+</style>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+<!-- <script src="https://unpkg.com/vue@next"></script> -->
+<!-- <script src="./admin-pro"></script> -->
+<script>
+
+	// let productCodes = JSON.parse('<%- JSON.stringify(data.productCodes) %>')
+	// let total = JSON.parse('<%- JSON.stringify(data.total) %>')
+	
+</script>

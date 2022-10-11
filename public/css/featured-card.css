@@ -1,0 +1,50 @@
+.policy-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 20px 20px 0;
+    box-shadow: 0 8px 24px rgb(149 157 165 / 20%);
+    transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+    transition: transform .5s ease,-webkit-transform .5s ease;
+}
+
+.policy-card:hover {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+}
+
+.policy-card:hover .policy-card__info-name {
+    color: var(--blue-color);
+}
+
+.policy-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    color: var(--blue-color);
+    font-size: 3.9rem;
+}
+
+.policy-card__info-name {
+    font-size: 1.625rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.policy-card__info-description {
+    font-size: 1.3rem;
+    color: #8d8d8d;
+}
+
+@media only screen and (max-width: 37.5em){
+    .policy-card {
+        padding: 10px 10px 10px 0;
+    }
+
+    .policy-card__icon {
+        font-size: 2.5rem;
+        width: 25%;
+    }
+}

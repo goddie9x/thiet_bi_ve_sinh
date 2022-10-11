@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="/public/css/login.css" />
+	</head>
+
+	<body>
+		<section>
+			<!--Bắt Đầu Phần Hình Ảnh-->
+			<div class="img-bg">
+				<img src="/public/images/authImg/login.jpg" alt="" loading="lazy"  />
+			</div>
+			<!--Kết Thúc Phần Hình Ảnh-->
+			<!--Bắt Đầu Phần Nội Dung-->
+			<div class="noi-dung">
+				<div class="form">
+					<h2>LOGIN</h2>
+					<form action="">
+						<div class="input-form">
+							<span>Email hoặc Số điện thoại</span>
+							<input
+								type="text"
+								name=""
+								id="user"
+								placeholder="Email or Phone"
+							/>
+						</div>
+						<div class="input-form">
+							<span>Mật Khẩu</span>
+							<input
+								type="password"
+								id="password"
+								required
+								name="password"
+								placeholder="Password"
+								minlength="6"
+							/>
+						</div>
+						<!-- <div class="nho-dang-nhap">
+                        <label><input type="checkbox" name=""> Nhớ tài khoản</label>
+                    </div> -->
+						<div class="input-form">
+							<input type="submit" value="Đăng Nhập" />
+						</div>
+						<div class="input-form">
+							<a href="/auth/register">Tạo Tài Khoản? </a>
+							<!-- <a href="" id="myBtn">Quên Mật Khẩu?</a> -->
+						</div>
+						<div class="input-form">
+							<a href="/">Trang chủ</a>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!--Kết Thúc Phần Nội Dung-->
+		</section>
+
+		<!-- Form quen mat khau -->
+		<div>
+			<!-- The Modal -->
+			<div id="myModal" class="modal">
+				<!-- Modal content -->
+				<div class="modal-content">
+					<span class="close">X</span>
+					<p>Xác thực danh tính</p>
+					<div class="input-form">
+						<span>Tên Đăng Nhập</span>
+						<input type="text" name="" id="user" placeholder="Email or Phone" />
+					</div>
+					<div class="input-form">
+						<input type="submit" value="Xác thực" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<!-- <script src="../pages/login.ejs"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="/public/js/login.js"></script>
+</html>

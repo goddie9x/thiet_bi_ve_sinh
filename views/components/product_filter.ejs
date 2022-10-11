@@ -1,0 +1,55 @@
+<div class="product-filter__close">
+    <i class="bx bx-left-arrow-alt"></i>
+</div>
+<div class="product-filter__section">
+    <h3 class="product-filter-section__title">Danh mục sản phẩm</h3>
+    <div class="product-filter-section__content type">
+        <% types.forEach(type => { %>
+            <div class="product-filter-section__item">
+                <label class="custom-checkbox">
+                    <input type="checkbox" value="<%= type %>" name="type">
+                    <span class="custom-checkbox__checkmark">
+                        <i class="bx bx-check"></i>
+                    </span><%= type.replace(/-/g," ") %>
+                </label>
+            </div>
+        <% }) %> 
+    </div>
+</div>
+<div class="product-filter__section">
+    <h3 class="product-filter-section__title">Màu sắc</h3>
+    <div class="product-filter-section__content color">
+        <% colors.forEach(color => { %>
+            <div class="product-filter-section__item">
+                <label class="custom-checkbox">
+                    <input type="checkbox" value="<%= color %>" name="color">
+                    <span class="custom-checkbox__checkmark">
+                        <i class="bx bx-check"></i>
+                    </span><%= color %>
+                </label>
+            </div>
+        <% }) %> 
+    </div>
+</div>
+<div class="product-filter__section">
+    <h3 class="product-filter-section__title">Kích cỡ</h3>
+    <div class="product-filter-section__content size">
+        <% sizes.forEach(size => { %>
+            <div class="product-filter-section__item">
+                <label class="custom-checkbox">
+                    <input type="checkbox" value="<%= size %>" name="size">
+                    <span class="custom-checkbox__checkmark">
+                        <i class="bx bx-check"></i>
+                    </span><%= size %>
+                </label>
+            </div>
+        <% }) %> 
+    </div>
+</div>
+<div class="product-filter__section">
+    <div class="product-filter-section__content del-filter">
+        <button class="btn bg-primary btn-small">
+            <span class="btn-txt">xóa bộ lọc</span>
+        </button>
+    </div>
+</div>

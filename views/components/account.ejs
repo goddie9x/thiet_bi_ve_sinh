@@ -1,0 +1,139 @@
+<div class="account-wrapper">
+    <div class="grid-rows">
+        <div class="grid-col-4 ms-grid-col-full account-menu" height="100">
+            <div class="account-avatar">
+                <img src="<%= user.avatar %>" alt="" loading="lazy">
+                <div class="account-avatar__info">
+                    <span>Tài khoản của</span>
+                    <strong class="user-account__name"><%= user.name %></strong>
+                </div>
+            </div>
+            <ul class="account-action">
+                <li class="account-action__item">
+                    <i class='bx bxs-user'></i>
+                    <span>Thông tin tài khoản</span>
+                </li>
+                <li class="account-action__item my-orders">
+                    <i class='bx bxs-book-content'></i>
+                    <span>Quản lý đơn hàng</span>
+                </li>
+            </ul>
+        </div>
+        <div class="grid-col-3_4 account-right ms-grid-col-full">
+            <h3>Thông tin tài khoản</h3>
+            <div class="account-info" style="background-color: #EBEBF0;">
+                <form class="info" action="/user/account/edit-account" method="PUT">
+                    <div class="form-control">
+                        <label for="">Họ tên</label>
+                        <div>
+                            <input type="text" name="fullName" minlength="6" maxlength="128" id="user-account__fullname" value="<%= user.name %>">
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <label for="">Số điện thoại</label>
+                        <div>
+                            <input type="tel" id="user-account__tel" name="phoneNumber" placeholder="Hãy nhập SĐT để trải nghiệm tốt hơn" value="<%= user.phoneNumber %>" pattern="0[0-9]{9}" title="Hãy điền đúng 10 chữ số điện thoại">
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <label for="">Email</label>
+                        <div>
+                            <input type="email" id="user-account__email" name="email" value="<%= user.email %>">
+                        </div>
+                    </div>
+                    <!-- <div class="form-control">
+                        <label for="">Giới tính</label>
+                        <div>
+                            <label class="gender-check">
+                                <input type="radio" name="gender" value="male" checked>
+                                <span class="label">Nam</span>
+                            </label>
+                            <label class="gender-check">
+                                <input type="radio" name="gender" value="female">
+                                <span class="label">Nữ</span>
+                            </label>
+                        </div>
+                    </div> -->
+                    <!-- <div class="form-control">
+                        <label class="input-label">
+                            Ngày sinh
+                            <span>(không bắt buộc)</span>
+                        </label>
+                        <div>
+                            <select id="day">
+                            </select>
+                            <select id="month">
+                            </select>
+                            <select id="year">
+                            </select>
+                        </div>
+                    </div> -->
+                    <div class="form-control">
+                        <label class="input-label">&nbsp;</label>
+                        <label style="display: flex; flex: 1;">
+                            <input type="checkbox" class="changePass" onclick="changePassActive()">
+                            <span class="label">Thay đổi mật khẩu</span>
+                        </label>
+                    </div>
+                    <input type="checkbox" id="showChangePass" style="display: none;">
+                    <div class="form-control ">
+                        <label class="input-label">Mật khẩu cũ</label>
+                        <div>
+                            <span class="show-pass">
+                                <i class='bx bxs-show'></i>
+                            </span>
+                            <input type="password" name="user-account__oldPassword" placeholder="Nhập mật khẩu cũ" value="" minlength="6">
+                        </div>
+                    </div>
+                    <div class="form-control ">
+                        <label class="input-label">Mật khẩu mới</label>
+                        <div>
+                            <span class="show-pass">
+                                <i class='bx bxs-show'></i>
+                            </span>
+                            <input type="password" name="user-account__newPassword" placeholder="Mật khẩu từ 6 ký tự" value="" minlength="6">
+                        </div>
+                    </div>
+                    <div class="form-control ">
+                        <label class="input-label">Nhập lại</label>
+                        <div>
+                            <span class="show-pass">
+                                <i class='bx bxs-show'></i>
+                            </span>
+                            <input type="password" minlength="6" name="user-account__confirmPassword" placeholder="Nhập lại mật khẩu mới" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="input-label">&nbsp;</label>
+                        <button type="submit" class="btn btn-primary btn-large btn-submit">Cập nhật</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="grid-col-3_4 account-right ms-grid-col-full">
+            <h3>Đơn hàng của tôi</h3>
+            <%- include('../components/account_order'); -%> 
+        </div>
+    </div>
+    <div class="avatar-modal">
+        <div class="avatar-modal__inner">
+            <div class="avatar-modal-inner__head">
+                <div class="avatar-preview">
+                    <img src="<%= user.avatar %>" alt="avatar error" loading="lazy">
+                    <div class="circle-loading hide"></div>
+                </div>
+                <h2>Avatar Profile</h2>
+            </div>
+            <div class="avatar-modal-inner__body">
+                <form class="avatar" action="/account/edit-avatar" method="PUT" enctype="multipart/form-data">
+                    <input type="file" id="FileUploadAvatar" name="avatar" style="display: none" />
+                </form>
+                <ul>
+                    <li id="uploadavatar" style="color: #0D2137; font-weight: 600;">Upload Photo</li>
+                    <li id="removeavatar" style="color: red; font-weight: 600;">Remove Current Photo</li>
+                    <li id="cancelavatar">Cancel</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

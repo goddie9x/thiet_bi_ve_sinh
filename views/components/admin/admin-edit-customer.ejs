@@ -1,0 +1,61 @@
+<form enctype="multipart/form-data">
+	<h2 class="title-header">Thông tin khách hàng</h2>
+
+	<label for="customer-name">Tên khách hàng</label>
+	<input
+		type="text"
+		placeholder="Tên khách hàng"
+		name="name"
+		id="customer-name"
+		required
+        value="<%= user.name %>"
+	/>
+
+	<label for="customer-phone">Số điện thoại</label>
+	<input
+		type="number"
+		placeholder="Số điện thoại"
+		name="phoneNumber"
+		id="customer-phone"
+        required
+        value="<%= user.phoneNumber %>"
+	/>
+
+
+	<label for="customer-email">Email</label>
+	<input
+		type="email"
+		placeholder="Email"
+		name="email"
+		id="customer-email"
+        required
+        value="<%= user.email %>"
+	/>
+
+    <label for="product-role">Phân quyền</label>
+    <select name="role" required id="product-role">
+        <option value="admin">Admin</option>
+        <option value="user">User</option>
+    </select>
+
+
+	<div class="input-image mt-5">
+		<label for="customer-image"> Sửa avatar khách hàng </label>
+		<input
+			hidden
+			type="file"
+			accept=".jpg, .jpeg, .png"
+			id="customer-image"
+			name="avatar"
+		/>
+		<div class="preview-image">
+            <img src="<%= user.avatar %>" alt="" loading="lazy" >
+        </div>
+	</div>
+
+	<button type="submit" class="edit-customer-button">Cập nhật thông tin khách hàng</button>
+</form>
+
+<script>
+    let user = JSON.parse('<%- JSON.stringify(data.user) %>')
+</script>

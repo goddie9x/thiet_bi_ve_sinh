@@ -1,0 +1,233 @@
+a {
+  text-decoration: none;
+}
+
+.admin-orders {
+  width: 100%;
+}
+
+.admin-orders table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: var(--white-color);
+}
+
+.admin-orders table th,
+.admin-orders table td {
+  text-align: left;
+  padding: 7px 5px;
+  white-space: nowrap;
+}
+
+.admin-orders table th img,
+.admin-orders table td img {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.admin-orders table thead {
+  background-color: var(--main-color);
+  color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.admin-orders table .stt-order {
+  width: 2%;
+  text-align: center;
+}
+
+.admin-orders table .action-order button {
+  font-size: 18px;
+  margin: 8px;
+}
+
+.admin-orders .orders-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.admin-orders .orders-action .action-filter {
+  margin-left: auto;
+  position: relative;
+}
+
+.admin-orders .orders-action .action-filter:hover ul {
+  display: block;
+}
+
+.admin-orders .orders-action .action-filter > ul {
+  bottom: 0;
+  left: -80%;
+  position: absolute;
+  background: #d1cdcd;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  display: none;
+  overflow: hidden;
+}
+
+.admin-orders .orders-action .action-filter > ul li {
+  list-style: none;
+  padding: 8px 20px;
+  font-size: 19px;
+}
+
+.admin-orders .orders-action .action-filter > ul li span {
+  color: var(--main-color);
+}
+
+.admin-orders .orders-action .action-filter > ul li:hover {
+  background: #c0c0b4;
+}
+
+.admin-orders .orders-action .action-filter,
+.admin-orders .orders-action .action-add,
+.admin-orders .orders-action .total-orders {
+  font-size: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  top: 10px;
+  padding: 8px 20px;
+  border-radius: 5px;
+}
+
+.admin-orders .orders-action .action-filter span,
+.admin-orders .orders-action .action-add span,
+.admin-orders .orders-action .total-orders span {
+  color: red;
+  font-size: 18px;
+}
+
+.admin-orders .orders-action .action-filter i,
+.admin-orders .orders-action .action-add i,
+.admin-orders .orders-action .total-orders i {
+  margin-right: 6px;
+  font-size: 17px;
+  position: relative;
+  top: 2px;
+  margin-top: 1px;
+}
+
+.admin-products .products-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.total-orders:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+button {
+  display: inline-block;
+  padding: 5px 10px;
+  outline: none;
+  border: none;
+  background: #fa3a3a;
+  color: white;
+  border-radius: 5px;
+  margin: 0 2px;
+  font-size: 14px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.detail-order {
+  background-color: #e7e00a;
+  padding: 0;
+}
+
+.detail-order a {
+  padding: 5px 10px;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  color: white;
+}
+
+.delivery-order {
+  background-color: #0ca90c;
+}
+
+.bill-order {
+  background-color: #3838e1;
+}
+
+td:last-child {
+  padding-right: 0 !important;
+}
+
+.action-filter {
+  padding: 0;
+  border: 0;
+}
+
+.action-filter select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--main-color);
+}
+
+.action-filter:hover select {
+  color: white;
+  background-color: var(--main-color);
+}
+
+.admin-orders table td.order-status {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.admin-orders table td.order-status.waiting {
+  color: #e7e00a;
+}
+
+.admin-orders table td.order-status.done {
+  color: #0ca90c;
+}
+
+.admin-orders table td.order-status.cancelled {
+  color: #fa3a3a;
+}
+
+.button-action.done button.delivery-order, .button-action.done button.cancel-order, .button-action.cancelled button.delivery-order, .button-action.cancelled button.cancel-order {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.6;
+  -webkit-box-shadow: 0 0 2px black;
+          box-shadow: 0 0 2px black;
+}
+/*# sourceMappingURL=admin-orders.css.map */

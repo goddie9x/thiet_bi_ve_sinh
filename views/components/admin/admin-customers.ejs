@@ -1,0 +1,51 @@
+<h2>Customers</h2>
+<div class="admin-customers">
+	<div class="customers-action">
+		<div class="action-search">
+			<i class="fas fa-search"></i>
+			<input type="text" placeholder="Tìm khách hàng" />
+		</div>
+		<div class="action-filter">
+			<!-- <i class="fas fa-filter"></i>
+			Add filter -->
+		</div>
+		<div class="total-customers">
+			<i class="fas fa-box"></i>
+			Tổng khách hàng:&nbsp;
+			<span>0</span>
+		</div>
+	</div>
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>STT</th>
+				<th>ID</th>
+				<th>Cover</th>
+				<th>Tên</th>
+				<th class="action-date" style="cursor: pointer;">Ngày tạo
+					<span>
+						<i class="fas fa-sort"></i>
+					</span>
+				</th>
+				<th>SĐT</th>
+				<!-- <th>Đã mua</th> -->
+				<th>Hành động</th>
+			</tr>
+		</thead>
+	</table>
+	<div class="pagination">
+	</div>
+</div>
+
+<style>
+	.form-check.form-switch input {
+		width: 45px;
+		cursor: pointer;
+	}
+</style>
+
+<script>
+	// let customers = JSON.parse('<%- JSON.stringify(data.customers) %>')
+	// let total = JSON.parse('<%- JSON.stringify(data.total) %>')
+    // console.log(customers)
+</script>

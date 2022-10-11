@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Yolo - Giỏ hàng</title>
+        <link rel="stylesheet" href="../../public/css/header.css" />
+        <link rel="stylesheet" href="../../public/css/featured-card.css" />
+		<link rel="stylesheet" href="../../public/css/slider.css" />
+		<link rel="stylesheet" href="../../public/css/product-card.css" />
+		<link rel="stylesheet" href="../../public/css/footer.css" />
+		<link rel="stylesheet" href="../../public/css/homeBase.css" />
+		<link rel="stylesheet" href="../../public/css/cart.css" />
+		<link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+	</head>
+
+	<style>
+		:root {
+			--blue-color: #0D2137;
+			--pink-color: #fe7e73;
+			--orange-color: #fbb96b;
+		}
+	</style>
+
+	<body>
+        <%- include ('../components/header'); -%>
+
+        <div id="cart__all" class="container">
+            <div class="main">
+                <div class="cart">
+                    <% if (cartNum.cartNum != null && cartNum.cartNum.products.length > 0){ %>
+                        <div class="cart__info">
+                            <div class="cart__info__txt">
+                                <p>
+                                    Bạn đang có
+                                    <span class='total__product'></span>
+                                    sản phẩm trong giỏ hàng
+                                </p>
+                                <div class="cart__info__txt__cost">
+                                    <span>Thành tiền:</span>
+                                    <span class='total__cost'> VNĐ</span>
+                                </div>
+                            </div>
+                            <div class="cart__info__btn">
+                                <button class="btn btn-small btn-order">
+                                    <span class="btn-txt-cart">Đặt hàng</span>
+                                </button>
+                                <button class="btn btn-small btn-cart">
+                                    <span class="btn-txt-cart">Tiếp tục mua hàng</span>
+                                </button>
+                            </div>
+                        </div>
+                    <% } %>
+                    <div class="cart__list">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%- include ('../components/footer'); -%> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="../../public/js/header.js"></script>
+        <script src="../../public/js/cart.js"></script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<div class="product-card item pb-2">
+	<a href="/products/detail/<%= id %>">
+		<div class="product-card__image">
+			<img src="<%= imgFront %>" alt="" loading="lazy"/>
+			<img src="<%= imgBack %>" alt="" loading="lazy" />
+		</div>
+		<h3 class="product-card__name"><%= name %></h3>
+		<div class="product-card__price"><%= price %></div>
+	</a>
+	<div class="product-card__btn">
+		<a href="/products/detail/<%= id %>">
+			<button class="btn btn-primary btn-small">
+				<span class="btn-txt">Chọn mua</span>
+				<span class="btn-icon">
+					<i class="bx bx-cart bx-tada"></i>
+				</span>
+			</button>
+		</a>
+	</div>
+</div>

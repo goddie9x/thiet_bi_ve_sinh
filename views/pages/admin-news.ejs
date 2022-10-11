@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Yolo - Tin tức</title>
+	<link rel="stylesheet" href="/public/css/header.css" />
+	<link rel="stylesheet" href="/public/css/footer.css" />
+	<link rel="stylesheet" href="/public/css/homeBase.css" />
+	<link rel="stylesheet" href="/public/css/news.css" />
+	<link rel="stylesheet" href="/public/css/admin-news.css" />
+	<link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<style>
+	:root {
+		--blue-color: #0D2137;
+		--pink-color: #fe7e73;
+		--orange-color: #fbb96b;
+	}
+</style>
+
+<body>
+	<%- include ('../components/header'); -%>
+
+		<div class="container">
+			<div class="main">
+				<div>
+					<div class="section">
+						<div class="section-title">All News</div>
+						<div class="section-body">
+							<div>
+								<h2 style="margin-bottom: 15px">Quantity: <%= totalNews %> </h2>
+								<a href="/admin/add-news" class="btn btn-large btn-txt btn-primary">Thêm tin tức</a>
+							</div>
+							<table>
+                                <thead>
+                                    <th>No</th>
+                                    <th>Title</th>
+                                    <th>Published Date</th>
+                                    <th>#</th>
+                                </thead>
+                                <tbody>
+                                    <% news.forEach((n,idx)=> { %>
+                                        <tr>
+											<td>
+												<%= idx + 1 %>
+											</td>
+											<td>
+												<a href="/news/detail/<%= n.slug %>">
+													<%= n.title %>		
+												</a>
+											</td>
+											<td>
+												<% var date=new Date(n.updatedAt); %>
+												<%= date.getFullYear()+'-' + (date.getMonth()+1) + '-' +date.getDate(); %>
+											</td>
+											<td>
+												<a href="/admin/edit-news/<%= n.slug %>">Edit</a>
+												<a href="#" onclick="deleteNews('<%=n._id %>')">Delete</a> 
+											</td>
+                                        </tr>
+                                    <% }) %>       
+                                </tbody>
+                            </table>
+							
+							<!-- pagination -->
+							<div class="pagination">
+								<% if(pages> 0) { %>
+										<ul class="pagination" style="margin-top: 2rem;">
+
+											<!-- FIRST ITEM -->
+											<% if(current != 1) { %>
+												<li>
+													<a class="page-link" href="/admin/news">First</a>
+												</li>
+											<% } %>
+
+											<!-- ITEMS  -->
+											<% var i=(Number(current)> 2 ? Number(current) - 1 : 1) %>
+											<% if(i !==1) { %>
+												<li class="disabled">
+													<a href="#">...</a>
+												</li>
+											<% } %>
+											<% for(; i <=(Number(current) + 1) && i <=pages; i++) { %>
+												<% if(i==current) { %>
+												<li class="active">
+													<a href="/admin/news/<%= i %>/"><%= i %></a>
+												</li>
+												<% } else { %>
+													<li>
+														<a href="/admin/news/<%= i %>/"><%= i %></a>
+													</li>
+												<% } %>
+												<% if (i==Number(current) + 1 && i < pages) { %>
+													<li class="disabled">
+														<a href="#">...</a>
+													</li>
+												<% } %>
+											<% } %>
+
+											<!-- LAST ITEM -->
+											<% if(current != pages){ %>
+												<li>
+													<a href="/admin/news/<%= pages %>/">Last</a>
+												</li>
+											<% } %>
+										</ul>
+									<% } %>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<%- include ('../components/footer'); -%>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+			<script src="/public/js/header.js"></script>
+			<script src="/public/js/admin-editnews.js"></script>
+</body>
+
+</html>

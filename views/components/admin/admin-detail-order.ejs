@@ -1,0 +1,134 @@
+<form enctype="multipart/form-data">
+	<h2 class="title-header">Thông tin đơn hàng</h2>
+
+	<div class="orderer">
+		<h4>Nguời đặt</h4>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Cover</th>
+					<th>Tên</th>
+					<th>SĐT</th>
+					<th>Email</th>
+					<th>Role</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<a href="/admin/customers/<%= order.user._id %>"><%= order.user._id %></a>
+					</td>
+					<td class="orderer-cover">
+						<img
+							src="<%= order.user.avatar %>"
+							alt=""
+						/>
+					</td>
+					<td><%= order.user.name %></td>
+					<td><%= order.user.phoneNumber %></td>
+					<td><%= order.user.email %></td>
+					<td><%= order.user.role %></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="info-order">
+		<h4 class="mt-4">Đơn hàng</h4>
+		<div class="basic-info">
+			<div>
+				Ngày đặt:
+				<span><%= (order.createdAt.toLocaleDateString("en-GB")) %></span>
+			</div>
+			<div>
+				Hình thức:
+				<span><%= order.payment  %></span>
+			</div>
+			<div class="status">
+				Trạng thái:
+				<span class="<%= order.status %>"><%= order.status  %></span>
+			</div>
+		</div>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>STT</th>
+					<th>ID</th>
+					<th>Cover</th>
+					<th>Sản phẩm</th>
+					<th>Loại</th>
+					<th>Màu</th>
+					<th>Size</th>
+					<th>Số lượng</th>
+					<th>Tạm tính</th>
+				</tr>
+			</thead>
+			<tbody>
+				<%
+                    for (let i = 0; i < order.products.length; i++) {
+                        let product = order.products[i]
+                %>
+				<tr>
+					<td class="stt-product"><%= i + 1 %></td>
+					<td class="id-product">
+						<a href="/admin/products/<%= product.idProductCode %>"
+							><%= product.idProductCode %></a
+						>
+					</td>
+					<td class="cover-product">
+						<img src="<%= product.images[0] %>" alt="" loading="lazy"  />
+					</td>
+					<td class="name-product"><%= product.name %></td>
+					<td><%= product.type %></td>
+					<td><%= product.color %></td>
+					<td><%= product.size %></td>
+					<td class="last-product"><%= product.quantity %></td>
+					<td><%= (product.quantity * product.cost).toLocaleString() %></td>
+				</tr>
+				<%        
+                    }
+                %>
+			</tbody>
+			<tfoot>
+				<tr>
+					<th colspan="7"></th>
+					<th>Phí ship</th>
+					<th>30,000</th>
+				</tr>
+				<tr>
+					<th colspan="7"></th>
+					<th>Tổng tiền</th>
+					<th><%= order.totalCost.toLocaleString() %></th>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+	<div class="receiver">
+		<h4>Người nhận</h4>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Tên</th>
+					<th>Số điện thoại</th>
+					<th>Địa chỉ</th>
+					<th>Tin nhắn</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><%= order.receiverName %></td>
+					<td><%= order.phoneNumber %></td>
+					<td><%= order.address %></td>
+					<td><%= order.message %></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="order-action <%= order.status %>" data-id="<%= order._id %>">
+		<button class="delivery-order" onclick="deliveryOrder(event)">Giao hàng</button>
+		<a href="/invoices/<%= order._id %>" target="_blank" class="bill-order">
+			Hóa đơn
+		</a>
+		<button class="cancel-order" onclick="cancelOrder(event)">Hủy đơn hàng</button>
+	</div>
+</form>
